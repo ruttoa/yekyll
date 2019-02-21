@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+slug: blog
+---
+
+{% for post in site.posts %}
+<div class="hentry">
+    <div class="entry-meta"><time>{{ post.date | date: "%b %-d, %Y" }}</time></div>
+    <h2 class="entry-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+</div>
+{% endfor %}
+
+<div class="subscribe">
+    Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
+</div
